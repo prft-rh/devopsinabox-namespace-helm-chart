@@ -2,7 +2,6 @@ apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
 metadata:
   name: {{ include "devops-in-a-box-namespace.fullname" . }}
-  namepace: {{ .Values.destination.namespace }}
 spec:
   groups:
   - name: spring-boot
