@@ -15,8 +15,6 @@ spec:
     description: The ADO org name
   - name: project
     description: The ADO project name
-  - name: pat
-    description: The ADO personal access token
   - name: image-repo
     description: The container image repo
   - name: config-repo
@@ -38,8 +36,6 @@ spec:
           value: $(tt.params.org)
         - name: PROJECT
           value: $(tt.params.project)
-        - name: PAT
-          value: $(tt.params.pat)
         - name: APP_NAME
           value: $(tt.params.app-name)
         - name: APP_REPO

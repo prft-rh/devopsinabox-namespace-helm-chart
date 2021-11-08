@@ -41,12 +41,17 @@ spec:
         - update
         - '-o $(org)'
         - '-j $(project)'
-        - '-t $(pat)'
         - '-f $(file-path)'
         - '-s $(branch-generate-name)'
         - '-b $(source-branch)'
         - '-i $(new-image-url)'
         - '-r $(repo)'
+      env:
+        - name: AUTH_TOKEN
+          valueFrom:
+            secretKeyRef:
+              key: token
+              name: image-updater-secret
       image: 'quay.io/mrethers/ado-image-updater:latest'
       name: update-image
       resources: {}

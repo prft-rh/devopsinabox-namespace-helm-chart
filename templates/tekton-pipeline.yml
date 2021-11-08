@@ -37,11 +37,7 @@ spec:
       type: string
     # project name (ADO)
     - default: 'myProject'
-      name: PROJET
-      type: string
-    # Personal Access Token (PAT)
-    - default: 'abc123'
-      name: PAT
+      name: PROJECT
       type: string
     # the name of the field holding the container image in the CRD (Spring Boot/NodeJS/etc)
     - default: "spec.container.image"
@@ -88,8 +84,6 @@ spec:
           value: $(params.ORG)
         - name: project
           value: $(params.PROJECT)
-        - name: pat
-          value: $(params.PAT)
         - name: file-path
           value: $(params.APP_NAME).yaml
         - name: new-image-url
@@ -113,8 +107,6 @@ spec:
           value: $(params.ORG)
         - name: project
           value: $(params.PROJECT)
-        - name: pat
-          value: $(params.PAT)
         - name: file-path
           value: $(params.APP_NAME).yaml
         - name: new-image-url
