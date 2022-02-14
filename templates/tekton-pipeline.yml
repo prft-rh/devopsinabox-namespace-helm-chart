@@ -126,7 +126,7 @@ spec:
         - name: branch-generate-name
           value: ''
       runAfter:
-        - build
+        - build-container-image
       taskRef:
         kind: Task
         name: image-updater
